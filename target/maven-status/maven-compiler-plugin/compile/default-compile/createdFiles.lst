@@ -1,0 +1,11 @@
+co\uk\monese\assignment\entities\Account.class
+co\uk\monese\assignment\MoneseApplication.class
+co\uk\monese\assignment\services\BankService.class
+co\uk\monese\assignment\repositories\TransactionRepository.class
+co\uk\monese\assignment\repositories\AccountRepository.class
+co\uk\monese\assignment\pojos\TransactionRequest.class
+co\uk\monese\assignment\services\BankServiceImpl.class
+co\uk\monese\assignment\controllers\BankServiceController.class
+co\uk\monese\assignment\entities\Transaction.class
+co\uk\monese\assignment\util\MoneseEntityManager.class
+co\uk\monese\assignment\pojos\Statement.class
