@@ -3,7 +3,6 @@ package co.uk.monese.assignment.pojos;
 import co.uk.monese.assignment.entities.Transaction;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 public class Statement {
 
