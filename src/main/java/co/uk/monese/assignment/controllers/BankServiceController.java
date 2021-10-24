@@ -41,7 +41,7 @@ public class BankServiceController {
         Account recipient = accountRepository.getAccountForId(transactionRequest.getRecipientId());
 
         BigDecimal transactionAmount = transactionRequest.getAmount();
-        if (transactionAmount.compareTo(sender.getBalance()) == 1) {
+        if (transactionAmount.compareTo(sender.getBalance()) > 0) {
             throw new IllegalStateException("The sender does not have enough funds to perform this transaction.");
         }
 

@@ -4,6 +4,7 @@ import co.uk.monese.assignment.entities.Account;
 import co.uk.monese.assignment.entities.Transaction;
 import co.uk.monese.assignment.util.MoneseEntityManager;
 
+import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
 
@@ -19,6 +20,9 @@ public class TransactionRepository {
     }
 
     public void saveTransaction(Transaction transaction) {
-        MoneseEntityManager.create().persist(transaction);
+        EntityManager entityManager = MoneseEntityManager.create();
+        entityManager.getTransaction().begin();
+        entityManager.persist(transaction);
+        entityManager.getTransaction().commit();
     }
 }

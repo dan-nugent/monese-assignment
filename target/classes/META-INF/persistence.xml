@@ -7,15 +7,11 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>co.uk.monese.assignment.entities.Account</class>
         <class>co.uk.monese.assignment.entities.Transaction</class>
-
         <properties>
-            <!--JDBC properties-->
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/monese"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="password"/>
-
-            <!--Hibernate properties-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>

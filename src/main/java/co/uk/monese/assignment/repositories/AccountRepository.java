@@ -3,6 +3,8 @@ package co.uk.monese.assignment.repositories;
 import co.uk.monese.assignment.entities.Account;
 import co.uk.monese.assignment.util.MoneseEntityManager;
 
+import javax.persistence.EntityManager;
+
 public class AccountRepository {
 
     public AccountRepository() {
@@ -13,6 +15,9 @@ public class AccountRepository {
     }
 
     public void updateAccount(Account account) {
-        MoneseEntityManager.create().merge(account);
+        EntityManager entityManager = MoneseEntityManager.create();
+        entityManager.getTransaction().begin();
+        entityManager.merge(account);
+        entityManager.getTransaction().commit();
     }
 }
